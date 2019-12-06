@@ -15,6 +15,19 @@ http://localhost:8088/
 * Create Map based Services. Create Abstract class with all the crud methods as above. Issue#9
 * Added a image banner via application.xml spring.banner.image.location -- Issue#9
 * Create Index Page and Controller Issue#11
+```java
+@Controller
+public class IndexController {
+    @RequestMapping({"","/","index","index.html"})
+    public String index(){
+        return "index";
+    }
+}
+```
+* Create Index Page for Vets and Controller 
+* Create Index Page for Owner and Controller
+* Create Index Page for Pets and Controller
+
 
 
 
