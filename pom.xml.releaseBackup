@@ -3,11 +3,9 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.spring5</groupId>
     <artifactId>pet-clinic</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-
+    <version>0.0.1SNAPSHOT</version>
     <name>pet-clinic</name>
     <description>Pet Clinic Project for Spring Boot and Thymeleaf templating engine</description>
-
     <packaging>pom</packaging>
     <modules>
         <module>pet-clinic-data</module>
@@ -46,5 +44,6 @@
 
     <scm>
         <developerConnection>scm:git:https://github.com/nitinkc/springboot-thymeleaf-pet-clinic.git</developerConnection>
-    </scm>
+      <tag>pet-clinic-0.0.1</tag>
+  </scm>
 </project>
