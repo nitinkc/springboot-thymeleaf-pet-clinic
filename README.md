@@ -18,5 +18,6 @@ Create a CrudService Interface comprising common methods like findById, save, de
 Create Map based Services. Create Abstract class with all the crud methods as above. Issue#9
 
 Added a image banner via application.xml spring.banner.image.location -- Issue#9
-Create Index Page and Controller
+
+Create Index Page and Controller Issue#11
 
