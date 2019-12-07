@@ -4,8 +4,6 @@ import com.spring5.petclinic.model.Owner;
 import com.spring5.petclinic.model.Vet;
 import com.spring5.petclinic.services.OwnerService;
 import com.spring5.petclinic.services.VetService;
-import com.spring5.petclinic.services.map.OwnerServiceMap;
-import com.spring5.petclinic.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -15,9 +13,10 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader(){
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    //Injecting via constructor. no need for @Autowire
+    public DataLoader(OwnerService ownerService, VetService vetService){
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
     @Override
     public void run(String... args) throws Exception {
