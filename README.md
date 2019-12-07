@@ -28,7 +28,29 @@ public class IndexController {
 * Create Index Page for Owner and Controller
 * Create Index Page for Pets and Controller
 
+* Data Boot strapping. Issue #14
+* Implement Spring Config for Services
+* Listing All Owners on Index Page
+```java
+@Controller
+@RequestMapping("/owners")
+public class OwnersController {
 
+    //Declaring final so that it cant be changes after constructor injection
+    private final OwnerService ownerService;
+
+    //Constructor Injection
+    public OwnersController(OwnerService ownerService) {
+        this.ownerService = ownerService;
+    }
+
+    @RequestMapping({"","/","/index","/index.html"})
+    public String listOwners(Model model){
+        model.addAttribute("owners",ownerService.findAll());
+        return "owners/index";
+    }
+}
+```
 
 
 
